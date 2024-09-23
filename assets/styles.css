@@ -25,10 +25,10 @@ body {
       position: relative;
       background-color: var(--light-grayish-blue);
 }
-/*
+
 html {
     overflow-x: hidden;
-}*/
+}
 
 .overlay {
     background-color: var(--black);
