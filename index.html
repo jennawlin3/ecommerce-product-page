@@ -49,32 +49,17 @@
       <div class="header-options">
         <div class="cart-container">
         <img src="./images/icon-cart.svg" alt="Cart icon" srcset="" class="cart-icon">
-        <span class="product-number">3</span>
-        <div class="cart hide">
-          <h3>Cart</h3>
-          <div class="cart-items">
-            <div class="cart-item">
-              <div class="product-info_container__cart">
-                <img src="./images/image-product-1-thumbnail.jpg" alt="Product thumbnail" srcset="" class="product-pic_cart">
-                <div class="product-info_cart">
-                  <p class="product-title_cart">
-                    Fall Limited Edition Sneakers
-                  </p>
-                  <div class="product-prices_cart">
-                    <p class="individual-price_container__cart">$<span class="individual-price__cart">125.00</span></p>
-                    <p class="product-count_container__cart">x<span class="item-count__cart">3</span></p>
-                    <p class="total-price_container">$<span class="total">375.00</span></p>
-                  </div>
-                </div>
-                <img src="./images/icon-delete.svg" alt="Delete icon" srcset="" class="delete-btn">
-              </div>
-            </div>
-          </div>
-            <button class="checkout-btn">Checkout</button>
-        </div>          
+        <span class="product-number hide">3</span>        
         </div>
         <img src="./images/image-avatar.png" alt="User avatar" srcset="" class="avatar">
       </div>
+        <div class="cart hide">
+          <h3>Cart</h3>
+          <div class="cart-items">
+            <p class="empty">Your cart is empty</p>
+          </div>
+            <button class="checkout-btn hide">Checkout</button>
+        </div>  
     </div>
   </header>
   <main class="container">
@@ -108,21 +93,20 @@
           <img src="./images/image-product-1.jpg" alt="Product picture" srcset="" class="product-actual_picture">
       </div>
       <div class="gallery-pictures">
-        <div class="picture">
-        <img src="./images/image-product-1.jpg" alt="Product picture" srcset="" class="gallery-pic actual">     
+        <div class="picture actual">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic actual" data-id="1">     
         </div>
         <div class="picture">
-        <img src="./images/image-product-2.jpg" alt="Product picture" srcset="" class="gallery-pic">            
+        <img src="./images/image-product-2-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic" data-id="2">            
         </div>
         <div class="picture">
-        <img src="./images/image-product-3.jpg" alt="Product picture" srcset="" class="gallery-pic">              
+        <img src="./images/image-product-3-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic" data-id="3">              
         </div>
         <div class="picture">
-        <img src="./images/image-product-4.jpg" alt="Product picture" srcset="" class="gallery-pic">              
+        <img src="./images/image-product-4-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic" data-id="4">              
         </div>
       </div>        
       </div>
-
     <div class="product-info_container">
       <p class="brand">Sneaker Company</p>
       <h1 class="product-title">Fall Limited Edition Sneakers</h1>
@@ -147,26 +131,48 @@
   </div>
     </div>
     </section>
-  <section class="gallery-desktop_modal">
+  <section class="gallery-desktop_modal hide">
+    <img src="./images/icon-close.svg" alt="close icon" srcset="" class="close-btn_modal">
     <div class="product-picture_container__modal">
 
       <div class="slider-desktop">
         <div class="slider-wrapper_desktop">
-          <img src="./images/image-product-1.jpg" alt="Product picture" srcset="">        
-          <img src="./images/image-product-2.jpg" alt="Product picture" srcset="">        
-          <img src="./images/image-product-3.jpg" alt="Product picture" srcset="">        
-          <img src="./images/image-product-4.jpg" alt="Product picture" srcset="">        
+          <div class="slide-desktop" data-id="1">
+          <img src="./images/image-product-1.jpg" alt="Product picture" srcset="" class="slide">
+          <span class="prev-btn"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+          <span class="next-btn"><img src="./images/icon-next.svg" alt="" srcset=""></span>    
+          </div>
+          <div class="slide-desktop" data-id="2">
+          <img src="./images/image-product-2.jpg" alt="Product picture" srcset="" class="slide">
+          <span class="prev-btn"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+          <span class="next-btn"><img src="./images/icon-next.svg" alt="" srcset=""></span>   
+          </div>
+          <div class="slide-desktop" data-id="3">
+          <img src="./images/image-product-3.jpg" alt="Product picture" srcset="" class="slide">
+          <span class="prev-btn"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+          <span class="next-btn"><img src="./images/icon-next.svg" alt="" srcset=""></span>   
+          </div>
+          <div class="slide-desktop" data-id="4">
+          <img src="./images/image-product-4.jpg" alt="Product picture" class="slide">
+          <span class="prev-btn"><img src="./images/icon-previous.svg" alt="" srcset=""></span>
+          <span class="next-btn"><img src="./images/icon-next.svg" alt="" srcset=""></span>  
+          </div>
         </div>
       </div>
   </div>
-  <div class="gallery-pictures_modal">        <div class="product-picture_container_modal">
-    <img src="./images/image-product-1.jpg" alt="Product picture" srcset="" class="product-actual_picture_modal">
-</div>
-<div class="gallery_pictures_modal">
-    <img src="./images/image-product-1.jpg" alt="Product picture" srcset="" class="gallery-pic_modal actual-pic_modal">        
-    <img src="./images/image-product-2.jpg" alt="Product picture" srcset="" class="gallery-pic_modal">        
-    <img src="./images/image-product-3.jpg" alt="Product picture" srcset="" class="gallery-pic_modal">        
-    <img src="./images/image-product-4.jpg" alt="Product picture" srcset="" class="gallery-pic_modal">   
+<div class="gallery-pictures_modal">
+  <div class="picture actual">
+    <img src="./images/image-product-1-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic_modal actual" data-id="1"> 
+  </div>
+  <div class="picture">
+    <img src="./images/image-product-2-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic_modal" data-id="2">         
+  </div>
+  <div class="picture">
+    <img src="./images/image-product-3-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic_modal" data-id="3">            
+  </div>
+  <div class="picture">
+    <img src="./images/image-product-4-thumbnail.jpg" alt="Product picture" srcset="" class="gallery-pic_modal" data-id="4">       
+  </div>
 </div>     
   </section>        
   </div>
