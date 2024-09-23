@@ -236,6 +236,10 @@ main {
     display: none;
 }
 
+.slider-mobile {
+    overflow-x: hidden;
+}
+
 .slider-mobile, .slider-desktop {
     width: 100%;
     height: 400px;
