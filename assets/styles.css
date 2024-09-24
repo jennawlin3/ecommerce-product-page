@@ -245,6 +245,10 @@ main {
     height: 400px;
 }
 
+.slider-mobile {
+    overflow: hidden;
+}
+
 .slider-wrapper_mobile {
     transform: translateX(0);
 }
