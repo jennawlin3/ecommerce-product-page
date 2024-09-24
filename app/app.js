@@ -113,6 +113,7 @@ const $addToCartIcon = d.querySelector(".add-to_cart__btn img");
 const $cartItems = d.querySelector(".cart-items");
 const $checkoutBtn = d.querySelector(".checkout-btn");
 const $emptyInfo = d.querySelector(".empty");
+const $productNumber = d.querySelector(".product-number");
 
 let itemCount = 0;
 let cartCount = 0;
@@ -251,6 +252,7 @@ function updateCart(productItem) {
 
   $cartItems.appendChild(cartItem);
   $checkoutBtn.classList.remove("hide");
+
   //console.log(cartCount);
 
   cartFunctionality();
@@ -261,8 +263,10 @@ function updateCart(productItem) {
 
 function cartFunctionality() {
   const $deleteBtn = d.querySelectorAll(".delete-btn");
-
-
+  const $cartItem = d.querySelectorAll(".cart-item");
+  
+  $productNumber.classList.remove("hide");
+  $productNumber.textContent = $cartItem.length;
 
   $deleteBtn.forEach((btn, i) => {
   btn.addEventListener("click", (e) => {
@@ -292,6 +296,7 @@ function cartFunctionality() {
 function deleteProduct(idItem) {
   const $cartItem = d.querySelectorAll(".cart-item");
   cartItemCount = $cartItem.length;
+  $productNumber.textContent = $cartItem.length;
 
   $cartItem.forEach((item, i) => {
     //console.log(item.getAttribute("data-cart"));
@@ -310,7 +315,8 @@ function deleteProduct(idItem) {
 
   if(cartItemCount === 0) {
     $emptyInfo.classList.remove("hide");
-    $checkoutBtn.classList.add("hide");
+    $checkoutBtn.classList.add("hide");  
+    $productNumber.classList.add("hide");
   }
   return; 
 }
