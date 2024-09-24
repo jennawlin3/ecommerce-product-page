@@ -23,9 +23,9 @@
       
       <div class="menu-container">
     <div class="mobile-nav_container">
-      <img src="./images/icon-menu.svg" alt="Menu icon" srcset="">
+      <img src="./images/icon-menu.svg" alt="Menu icon" srcset="" class="menu-icon">
       <div class="mobile-nav hide">
-        <img src="./images/icon-close.svg" alt="Close icon" srcset="">
+        <img src="./images/icon-close.svg" alt="Close icon" srcset="" class="close-icon">
         <nav class="nav-mobile">
           <a href="#">Collections</a>
           <a href="#">Men</a>
@@ -53,7 +53,7 @@
         </div>
         <img src="./images/image-avatar.png" alt="User avatar" srcset="" class="avatar">
       </div>
-        <div class="cart hide">
+        <div class="cart">
           <h3>Cart</h3>
           <div class="cart-items">
             <p class="empty">Your cart is empty</p>
@@ -114,7 +114,7 @@
   durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
   <div class="product-prices_container">
     <div class="individual-price_info">
-    <p class="individual-price">$125,00</p>
+    <p class="individual-price">$<span class="product-price">125,00</span></p>
     <p class="discount-info">50%</p>
     </div>
     <p class="former-price">$250,00</p>
@@ -122,9 +122,9 @@
   <div class="options-container">
   <div class="options-product_container">
   <div class="button-items_container">
-    <button><img src="./images/icon-minus.svg"></button>
+    <button><img src="./images/icon-minus.svg" class="remove-btn"></button>
     <p class="item-product_count">0</p>
-    <button><img src="./images/icon-plus.svg"></button>
+    <button><img src="./images/icon-plus.svg" class="more-btn"></button>
   </div>    
   </div>
     <button class="add-to_cart__btn"><img src="./images/icon-cart.svg">Add to cart</button>
